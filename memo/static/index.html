@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>명언 모음</title>
+  </head>
+  <body>
+    <form id="memo-form" method="POST">
+      <table>
+        <tr>
+          <th colspan="3">
+            <h3>명언 모음</h3>
+          </th>
+        </tr>
+
+        <tr>
+          <td>제목</td>
+          <td>
+            <input type="text" name="title" id="title" style="width: 100%" />
+          </td>
+        </tr>
+        <tr>
+          <td>내용</td>
+          <td>
+            <textarea
+              name="content"
+              id="content"
+              rows="5"
+              cols="35"
+              style="width: 100%"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="hidden" name="createAt" id="createAt" />
+          </td>
+          <td>
+            <button type="submit">등록</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <hr />
+    <main>
+      <div></div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
