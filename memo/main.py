@@ -17,13 +17,10 @@ app = FastAPI()
 async def create_memo(
     title: Annotated[str, Form()],
     content: Annotated[str, Form()]
-    # 🚨 createAt 필드 제거! DB가 자동으로 처리합니다.
 ):
     
     cur = con.cursor()
     
-    # ✅ SQL 인젝션 방지 (플레이스홀더 사용)
-    # createAt과 id는 DB가 처리하므로, 쿼리에서 생략합니다.
     try:
         cur.execute(
             "INSERT INTO memos (title, content) VALUES (?, ?)",
